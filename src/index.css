@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+/* ---------------------------------------------------------------
+   Layout concept: the whole page is the road from Limpopo to
+   Pretoria. Content sits on freeway-style signs (SA green, white
+   border), with yellow route markers and a scroll-linked "car"
+   on the road running down the left edge.
+   --------------------------------------------------------------- */
+@theme {
+  --color-asphalt: #202427;
+  --color-concrete: #dfe2de;
+  --color-sign: #00663f;
+  --color-sign-deep: #00472c;
+  --color-paper: #fbfbf8;
+  --color-marker: #ffc20e;
+  --color-service: #0b4f9c;
+  --color-ink: #14181a;
+  --color-ink-soft: #46504f;
+
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-concrete);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* paints the phone's top safe-area band behind the sticky bar */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--color-asphalt);
+  z-index: 60;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--color-marker);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-marker);
+  outline-offset: 3px;
+}
+
+/* dashed lane marking, reused by the road rail, roadmap and footer */
+.lane-dashes-v {
+  background: repeating-linear-gradient(to bottom, var(--color-marker) 0 14px, transparent 14px 28px);
+}
+.lane-dashes-h {
+  background: repeating-linear-gradient(to right, var(--color-marker) 0 22px, transparent 22px 44px);
+}
+
+@keyframes vms-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
