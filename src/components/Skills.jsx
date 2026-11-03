@@ -13,14 +13,14 @@ function Row({ skill }) {
         </span>
         {skill.name}
       </h4>
-      <p className="mt-0.5 pl-[52px] text-[15px] leading-snug text-paper/85">{skill.text}</p>
-      <div className="mt-2.5 flex items-center gap-3 pl-[52px]">
+      <p className="mt-0.5 pl-13 text-[15px] leading-snug text-paper/85">{skill.text}</p>
+      <div className="mt-2.5 flex items-center gap-3 pl-13">
         <div className="flex flex-1 gap-1" aria-hidden="true">
           {Array.from({ length: SEGMENTS }, (_, i) => (
             <span key={i} className={`h-1.5 flex-1 ${i < filled ? 'bg-marker' : 'bg-paper/25'}`} />
           ))}
         </div>
-        <span className="w-[68px] shrink-0 text-right font-mono text-[10px] tracking-[0.14em] text-paper/75">
+        <span className="w-17 shrink-0 text-right font-mono text-[10px] tracking-[0.14em] text-paper/75">
           {levelLabel(skill.level)}
         </span>
       </div>

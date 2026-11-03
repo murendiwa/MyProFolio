@@ -64,7 +64,7 @@ export default function Hero() {
             <img
               src={profile}
               alt={`Portrait of ${site.name}`}
-              className="min-h-[320px] w-full flex-1 object-cover object-[30%_20%]"
+              className="min-h-80 w-full flex-1 object-cover object-[30%_20%]"
             />
             <figcaption className="grid grid-cols-3 border-t-4 border-ink bg-asphalt text-paper">
               {[

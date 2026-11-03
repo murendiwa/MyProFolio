@@ -88,9 +88,6 @@ export default function Roadmap() {
         <h3 className="font-display text-[clamp(32px,5vw,48px)] leading-none font-bold uppercase">
           From high school to college
         </h3>
-        <p className="mt-4 max-w-[34ch] text-ink-soft">
-          Not a straight road. The bends, potholes and roadworks are part of the trip.
-        </p>
       </div>
 
       <ol>
@@ -105,7 +102,7 @@ export default function Roadmap() {
             <li
               key={step.stage}
               className={`grid grid-cols-[72px_1fr] gap-x-4 sm:grid-cols-[110px_1fr] sm:gap-x-6 lg:grid-cols-[170px_1fr] ${
-                last ? 'min-h-[150px]' : 'min-h-[300px]'
+                last ? 'min-h-37.5' : 'min-h-75'
               }`}
             >
               {/* this step's stretch of road */}
@@ -114,17 +111,17 @@ export default function Roadmap() {
                   viewBox="0 0 100 100"
                   preserveAspectRatio="none"
                   className={`absolute inset-x-0 -top-px h-[calc(100%+2px)] w-full overflow-visible ${
-                    last ? '[mask-image:linear-gradient(to_bottom,black_30%,transparent)]' : ''
+                    last ? 'mask-[linear-gradient(to_bottom,black_30%,transparent)]' : ''
                   }`}
                 >
-                  <path d={d} fill="none" vectorEffect="non-scaling-stroke" className="stroke-paper [stroke-width:24px] sm:[stroke-width:32px]" />
-                  <path d={d} fill="none" vectorEffect="non-scaling-stroke" className="stroke-asphalt [stroke-width:20px] sm:[stroke-width:28px]" />
-                  <path d={d} fill="none" vectorEffect="non-scaling-stroke" className="stroke-marker [stroke-dasharray:10_10] [stroke-width:2px]" />
+                  <path d={d} fill="none" vectorEffect="non-scaling-stroke" className="stroke-paper stroke-[24px] sm:stroke-[32px]" />
+                  <path d={d} fill="none" vectorEffect="non-scaling-stroke" className="stroke-asphalt stroke-[20px] sm:stroke-[28px]" />
+                  <path d={d} fill="none" vectorEffect="non-scaling-stroke" className="stroke-marker [stroke-dasharray:10_10] stroke-[2px]" />
                 </svg>
 
                 {/* stop marker */}
                 <span
-                  className={`absolute top-[14px] size-5 -translate-x-1/2 rounded-full border-[3px] border-ink ${
+                  className={`absolute top-3.5 size-5 -translate-x-1/2 rounded-full border-[3px] border-ink ${
                     step.current ? 'bg-marker' : 'bg-paper'
                   }`}
                   style={{ left: `${xa}%` }}

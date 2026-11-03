@@ -4,7 +4,7 @@
 export function Container({ className = '', children }) {
   return (
     <div
-      className={`mx-auto w-full max-w-[1160px] pr-[max(16px,env(safe-area-inset-right,0px))] pl-[max(16px,env(safe-area-inset-left,0px))] ${className}`}
+      className={`mx-auto w-full max-w-290 pr-[max(16px,env(safe-area-inset-right,0px))] pl-[max(16px,env(safe-area-inset-left,0px))] ${className}`}
     >
       {children}
     </div>
