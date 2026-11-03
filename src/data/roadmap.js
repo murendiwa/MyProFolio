@@ -13,13 +13,13 @@ export const roadmap = [
   {
     stage: 'ORIGIN',
     title: 'Tshiozwi, Limpopo',
-    text: 'Where it started. A rural community that taught me to figure things out for myself and make the most of what is in front of me.',
+    text: 'Where it started. A rural community that taught me to figure things out and make the most of what is in front of me.',
     obstacle: 'pothole',
   },
   {
     stage: 'HIGH SCHOOL',
-    title: 'Building the foundation',
-    text: 'Matric years of discipline and curiosity. I learned to work hard when nobody is watching and started pointing that effort towards a future in tech.',
+    title: 'Manaledzi Secondary School',
+    text: 'Matric years of discipline and curiosity. I learned to work hard and started pointing that effort towards a future in tech.',
     obstacle: 'cones',
   },
   {
@@ -28,6 +28,13 @@ export const roadmap = [
     text: 'Left home for the city to study Software Development. New place, new pace, same drive.',
     obstacle: 'hump',
   },
+  {
+    Stage: 'COLLEGE',
+    title:'Rosebank College',
+    text: 'Started my second year of Software Development at Rosebank College. Learning databases, systems design and security by making real things.',
+    obstacle: 'hump',
+  },
+
   {
     stage: 'YEAR 1',
     title: 'First lines of code',

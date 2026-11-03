@@ -10,23 +10,24 @@
 
 export const projects = [
   {
-    title: 'RACEDAY',
-    file: 'RaceDay.Api',
-    context: 'University POE',
-    status: 'In progress',
+    title: 'Personal Portfolio',
+    file: 'PersonalWeb',
+    context: 'Personal project',
+    status: 'Done and Live',
     description:
-      'A race event management platform. Organisers create events, categories and routes; participants enrol and see results. Built as a role-based ASP.NET Core Web API with cookie session auth, then extended with an MVC front end and Azure Blob storage.',
-    tags: ['C#', 'ASP.NET Core', 'EF Core', 'SQL Server', 'xUnit', 'GitHub Actions'],
-    github: 'https://github.com/murendiwa/POE-Part2',
+      'This is the first repository i created and will have my first mini APP idea or website that i will publish (2026-08-25)',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/murendiwa/myFirst',
   },
   {
-    title: 'CYBERGUARD',
-    file: 'CyberGuard.sln',
-    context: 'PROG6221 · POE',
-    status: 'Delivered',
+    title: 'Professional Portfolio',
+    file: 'MyProFolio',
+    context: 'Professional project',
+    status: 'Pending',
     description:
-      'A cybersecurity awareness chatbot for Windows. Includes a task assistant backed by MySQL, a 15-question quiz, a simple NLP engine that understands plain-English questions, and a timestamped activity log.',
-    tags: ['C#', 'WPF', '.NET', 'MySQL'],
+      'This is my second Website but more Professional.',
+    tags: ['JavaScript', 'React', 'TailwindCSS'],
+    github: 'https://github.com/murendiwa/MyProFolio',
   },
   {
     title: 'ACCESS DESK',
